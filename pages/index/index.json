@@ -1,1 +1,7 @@
-{}
+{
+  "usingComponents": {
+    "ant-button": "antd-mini/es/Button/index",
+    "ant-divider": "antd-mini/es/Divider/index"
+
+  }
+}

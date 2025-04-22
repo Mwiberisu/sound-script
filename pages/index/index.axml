@@ -1,3 +1,14 @@
-<view>
-  this is a blank page
+<view class="app">
+  <text>Search a Song</text>
+  <view>
+    <label>Artist Name</label>
+    <input maxlength="20" placeholder="Ed Sheeran" />
+  </view>
+
+  <view>
+    <label>Song Title</label>
+    <input maxlength="20" placeholder="Perfect" />
+  </view>
+  <ant-button type="default">Search</ant-button>
+
 </view>
