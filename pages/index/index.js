@@ -1,35 +1,55 @@
+import {
+  BASE_URL
+} from '../../utils/configs'
+
 Page({
-  onLoad(query) {
-    // Page load
-    console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
+  data: {
+
+    artist: 'Ed Sheeran',
+    song: 'Perfect',
+    lyrics: ''
+
   },
-  onReady() {
-    // Page loading is complete
+
+
+  setArtist(input) {
+    this.setData({
+      artist: input
+    })
   },
-  onShow() {
-    // Page display
+  setSong(input) {
+    this.setData({
+      song: input
+    })
   },
-  onHide() {
-    // Page hidden
+
+  reset() {
+
+    my.reLaunch({
+      url: '/pages/index/index',
+    })
   },
-  onUnload() {
-    // Page is closed
-  },
-  onTitleClick() {
-    // Title clicked
-  },
-  onPullDownRefresh() {
-    // Page is pulled down
-  },
-  onReachBottom() {
-    // Page is pulled to the bottom
-  },
-  onShareAppMessage() {
-    // Back to custom sharing information
-    return {
-      title: 'My App',
-      desc: 'My App description',
-      path: 'pages/index/index',
-    };
+  async searchLyrics() {
+    my.request({
+      url: BASE_URL + this.data.artist + '/' + this.data.song,
+      method: 'GET',
+      success: (res) => {
+        my.alert({
+          title: 'lyrics',
+          content: res.data.lyrics,
+          buttonText: 'Okay'
+        });
+      },
+      fail: (res) => {
+        my.alert({
+          title: 'Error fetching lyrics',
+          content: res.data.error,
+          buttonText: 'Okay'
+
+        });
+      }
+    });
+
+
   },
 });

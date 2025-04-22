@@ -6,25 +6,26 @@
     maxLength="20"
     label="Artist"
     name="artist"
-    placeholder="Ed Sheeran"
+    placeholder="{{artist}}"
     required
-    position="{{position}}"
-    ref="handleRef"
+    onChange=setArtist
   >
   </ant-form-input>
 
   <ant-form-input
     maxLength="20"
-    label="Title"
-    name="title"
+    label="Song"
+    name="song"
     required
-    position="{{position}}"
-    ref="handleRef"
-    placeholder="Perfect"
+    onChange=setSong
+    placeholder="{{song}}"
   >
   </ant-form-input>
 
-  <ant-button type="default">Search</ant-button>
+  <ant-button type="default" onTap="searchLyrics">Search</ant-button>
+  <ant-button onTap="reset" class="button">
+    Clear
+  </ant-button>
 
 
 </view>
