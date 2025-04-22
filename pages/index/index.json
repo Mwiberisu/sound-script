@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "ant-button": "antd-mini/es/Button/index",
-    "ant-divider": "antd-mini/es/Divider/index"
+    "ant-form-input": "antd-mini/es/Form/FormInput/index"
 
   }
 }

@@ -1,14 +1,30 @@
 <view class="app">
-  <text>Search a Song</text>
-  <view>
-    <label>Artist Name</label>
-    <input maxlength="20" placeholder="Ed Sheeran" />
-  </view>
 
-  <view>
-    <label>Song Title</label>
-    <input maxlength="20" placeholder="Perfect" />
-  </view>
+  <text class="header-text">Search A Song</text>
+
+  <ant-form-input
+    maxLength="20"
+    label="Artist"
+    name="artist"
+    placeholder="Ed Sheeran"
+    required
+    position="{{position}}"
+    ref="handleRef"
+  >
+  </ant-form-input>
+
+  <ant-form-input
+    maxLength="20"
+    label="Title"
+    name="title"
+    required
+    position="{{position}}"
+    ref="handleRef"
+    placeholder="Perfect"
+  >
+  </ant-form-input>
+
   <ant-button type="default">Search</ant-button>
+
 
 </view>

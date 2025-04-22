@@ -1,3 +1,22 @@
 .app {
-  background-color: navajowhite;
+  background-color: teal;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: goldenrod;
+  padding: 5%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
+}
+
+.header-text {
+  font-size: xx-large;
+  font-style: italic;
+  font-weight: bolder;
+  text-align: center;
+
+}
+
+.button {
+  margin-bottom: 12px;
 }
