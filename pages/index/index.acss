@@ -27,7 +27,3 @@
   border-radius: 5px;
 }
 
-.footer {
-  color: goldenrod;
-  font-size: xx-large;
-}

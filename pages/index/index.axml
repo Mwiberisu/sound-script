@@ -32,6 +32,6 @@
   </ant-button>
 
   <!-- footer -->
-  <ant-footer label="©Sound Script Co. Ltd." />
+  <text class="footer">©Sound Script Co. Ltd.</text>
 
 </view>

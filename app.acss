@@ -3,3 +3,9 @@ page {
   display: flex;
   background: #f7f7f7;
 }
+
+.footer {
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
