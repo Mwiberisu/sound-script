@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "ant-button": "antd-mini/es/Button/index",
-    "ant-form-input": "antd-mini/es/Form/FormInput/index"
+    "ant-form-input": "antd-mini/es/Form/FormInput/index",
+    "ant-footer": "antd-mini/es/Footer/index"
 
   }
 }

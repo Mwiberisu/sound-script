@@ -1,14 +1,14 @@
 <view class="app">
 
-  <text class="header-text">Search A Song</text>
+  <text class="header-text">Find A Song</text>
 
   <ant-form-input
     maxLength="20"
     label="Artist"
     name="artist"
-    placeholder="{{artist}}"
+    placeholder="Lord Huron"
     required
-    onChange=setArtist
+    ref=handleChange
     class="input"
   >
   </ant-form-input>
@@ -18,21 +18,20 @@
     label="Song"
     name="song"
     required
-    onChange=setSong
-    placeholder="{{song}}"
+    ref=handleChange
+    placeholder="The Night We Met"
     class="input"
-  >
-  </ant-form-input>
+  />
 
   <ant-button type="default" class="button" onTap="searchLyrics">
     Search
   </ant-button>
+
   <ant-button onTap="reset" class="button">
     Clear
   </ant-button>
 
-  <text class="header-text">{{title}}</text>
-  <text>{{lyrics}}</text>
-
+  <!-- footer -->
+  <ant-footer label="©Sound Script Co. Ltd." />
 
 </view>

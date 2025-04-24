@@ -1,0 +1,9 @@
+<view class="app">
+
+  <text class="header-text">{{title}}</text>
+  <text>{{lyrics}}</text>
+
+  <!-- footer -->
+  <ant-footer label="©Sound Script Co. Ltd." />
+
+</view>

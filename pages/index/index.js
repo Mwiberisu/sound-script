@@ -2,53 +2,49 @@ import {
   BASE_URL
 } from '../../utils/configs'
 
+import {
+  Form
+} from 'antd-mini/es/Form/form';
+
 Page({
-  data: {
-
-    artist: 'Lord Huron',
-    song: 'The Night We Met',
-    lyrics: '',
-    title: ''
-
+  onLoad() {
+    this.form = new Form({
+      initialValues: {
+        artist: 'Lord Huron',
+        song: 'The Night We Met'
+      },
+    });
   },
 
-
-  setArtist(input) {
-    this.setData({
-      artist: input
-    })
-  },
-  setSong(input) {
-    this.setData({
-      song: input
-    })
+  handleChange(ref) {
+    this.form.addItem(ref);
   },
 
   reset() {
-
-    my.reLaunch({
-      url: '/pages/index/index',
-    })
-
+    this.form.reset();
   },
   async searchLyrics() {
+    const {
+      artist,
+      song,
+    } = await this.form.submit();
+    my.showLoading({
+      content: 'loading...',
+      // delay: 1000,
+    });
     my.request({
-      url: BASE_URL + this.data.artist + '/' + this.data.song,
+      url: BASE_URL + artist + '/' + song,
       method: 'GET',
       success: (res) => {
+        my.hideLoading();
 
-        this.setData({
-          lyrics: res.data.lyrics,
-          title: this.data.song + ' by ' + this.data.artist
+        my.navigateTo({
+          url: '/pages/lyrics/index?title=' + song + ' by ' + artist + '&lyrics=' + res.data.lyrics
         });
 
-        // scroll to lyrics place
-        my.pageScrollTo({
-          scrollTop: 350,
-          duration: 300,
-        });
       },
       fail: (res) => {
+        my.hideLoading();
         my.alert({
           title: 'Error fetching lyrics',
           content: res.data.error,
@@ -57,7 +53,6 @@ Page({
         });
       }
     });
-
-
   },
+
 });
