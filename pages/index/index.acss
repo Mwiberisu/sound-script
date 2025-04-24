@@ -18,5 +18,11 @@
 }
 
 .button {
-  margin-bottom: 12px;
+  border-radius: 5px;
+  background-color: rgb(226, 187, 87);
+  color: teal;
+}
+
+.input {
+  border-radius: 5px;
 }

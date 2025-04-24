@@ -9,6 +9,7 @@
     placeholder="{{artist}}"
     required
     onChange=setArtist
+    class="input"
   >
   </ant-form-input>
 
@@ -19,13 +20,19 @@
     required
     onChange=setSong
     placeholder="{{song}}"
+    class="input"
   >
   </ant-form-input>
 
-  <ant-button type="default" onTap="searchLyrics">Search</ant-button>
+  <ant-button type="default" class="button" onTap="searchLyrics">
+    Search
+  </ant-button>
   <ant-button onTap="reset" class="button">
     Clear
   </ant-button>
+
+  <text class="header-text">{{title}}</text>
+  <text>{{lyrics}}</text>
 
 
 </view>

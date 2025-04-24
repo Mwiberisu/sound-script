@@ -5,9 +5,10 @@ import {
 Page({
   data: {
 
-    artist: 'Ed Sheeran',
-    song: 'Perfect',
-    lyrics: ''
+    artist: 'Lord Huron',
+    song: 'The Night We Met',
+    lyrics: '',
+    title: ''
 
   },
 
@@ -28,16 +29,23 @@ Page({
     my.reLaunch({
       url: '/pages/index/index',
     })
+
   },
   async searchLyrics() {
     my.request({
       url: BASE_URL + this.data.artist + '/' + this.data.song,
       method: 'GET',
       success: (res) => {
-        my.alert({
-          title: 'lyrics',
-          content: res.data.lyrics,
-          buttonText: 'Okay'
+
+        this.setData({
+          lyrics: res.data.lyrics,
+          title: this.data.song + ' by ' + this.data.artist
+        });
+
+        // scroll to lyrics place
+        my.pageScrollTo({
+          scrollTop: 350,
+          duration: 300,
         });
       },
       fail: (res) => {
