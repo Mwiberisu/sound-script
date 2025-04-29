@@ -33,9 +33,9 @@ Page({
       reason: 'Donation',
       success: function (res) {
         my.alert({
-          title: "Payment Successful",
-          content: JSON.stringify(res),
-          buttonText: "Thank You!",
+          title: "Payment Received",
+          content: "Thank you so much for your generous donation of KES " + donorAmount + ". Payment received under receipt " + res.transactionId,
+          buttonText: "Okay",
           success: () => {
             my.navigateTo({
               url: '/pages/index/index'
@@ -48,10 +48,8 @@ Page({
       fail: function (res) {
         my.alert({
           title: "Payment Error",
-          content: JSON.stringify(res),
+          content: res,
           buttonText: "Okay",
-
-
         });
 
       },
