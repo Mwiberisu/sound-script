@@ -1,0 +1,25 @@
+<view class="app">
+
+  <ant-card>
+    <text class="error">{{error}}</text>
+    <view class="buttons">
+      <ant-number-input
+        title="Choose an amount"
+        placeholder="Custom amount"
+        prefix="KES"
+        value="{{amount}}"
+        quickAmounts="{{quickAmounts}}"
+        onChange="handleChange"
+      >
+      </ant-number-input>
+    </view>
+
+    <ant-button class="coffee-submit" onTap="handleBuyMeACoffee">
+      <view >
+        <ant-icon type="HeartOutline" />
+        <text> Buy me a coffee</text>
+      </view>
+    </ant-button>
+  </ant-card>
+
+</view>

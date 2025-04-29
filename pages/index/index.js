@@ -10,8 +10,8 @@ Page({
   onLoad() {
     this.form = new Form({
       initialValues: {
-        artist: 'Lord Huron',
-        song: 'The Night We Met'
+        artist: '',
+        song: ''
       },
     });
   },
@@ -28,9 +28,9 @@ Page({
       artist,
       song,
     } = await this.form.submit();
+
     my.showLoading({
       content: 'loading...',
-      // delay: 1000,
     });
     my.request({
       url: BASE_URL + artist + '/' + song,
@@ -54,5 +54,11 @@ Page({
       }
     });
   },
+
+  handleBuyMeACoffee() {
+    my.navigateTo({
+      url: '/pages/coffee/coffee'
+    })
+  }
 
 });

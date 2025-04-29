@@ -1,8 +1,9 @@
 {
   "usingComponents": {
+    "ant-card": "antd-mini/es/Card/index",
     "ant-button": "antd-mini/es/Button/index",
     "ant-form-input": "antd-mini/es/Form/FormInput/index",
     "ant-icon": "antd-mini/es/Icon/index",
-    "ant-card": "antd-mini/es/Card/index"
+    "ant-number-input": "antd-mini/es/NumberInput/index"
   }
 }

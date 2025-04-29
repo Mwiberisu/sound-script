@@ -1,11 +1,16 @@
-page {
-  flex: 1;
-  display: flex;
-  background: #f7f7f7;
-}
-
 .footer {
   text-align: center;
   color: white;
   font-style: italic;
+}
+
+.app {
+  background-color: teal;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: goldenrod;
+  padding: 5%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
 }

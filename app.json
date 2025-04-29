@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/lyrics/index"
+    "pages/lyrics/index",
+    "pages/coffee/coffee"
   ],
   "window": {
     "defaultTitle": "Sound Script"

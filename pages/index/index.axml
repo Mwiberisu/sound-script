@@ -31,7 +31,18 @@
     Clear
   </ant-button>
 
+
+
+  <ant-button class="button" onTap="handleBuyMeACoffee">
+    <view >
+      <ant-icon type="HeartOutline" />
+      <text> Buy me a coffee</text>
+    </view>
+  </ant-button>
+
   <!-- footer -->
-  <text class="footer">©Sound Script Co. Ltd.</text>
+  <view class="footer">
+    <text >©Sound Script Co. Ltd.</text>
+  </view>
 
 </view>
